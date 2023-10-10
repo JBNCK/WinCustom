@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WinCustom - About</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="icon" type="image/x-icon" href="icon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <div class="navbar navbar_full_screen">
+                <div class="navbar_item"><img onclick="window.location.href = './'" class="navbar_icon" src="icon.png"><a class="navbar_current" href="about">About</a></div>
+            </div>
+        </header>
+
+        <div class="full_screen">
+            <h1>About</h1>
+            <h2>Who am I?</h2>
+            <p>Hi, my name is Jan, and I'm a 16-year-old hobbyist web developer from Germany. I have a personal website which you can check out <a href='https://janbiernacik.com'>here</a>. Just be aware that, as of right now, there is no english version.</p>
+            <h2>What is this?</h2>
+            <p>This webpage enables you to select from a variety of registry tweaks, which are then compiled into a single registry (.reg) file. Registry tweaks allow you to modify settings, which are not accessible by default, such as disabling telemetry or resizing the taskbar on Windows 11. While some presets aim to improve performance or privacy, others provide purely cosmetic changes. Further down, I explain the functionality of each preset in detail.</p>
+            <h1>Available presets</h1>
+            <h2>Remove bloatware and suggestions</h2>
+            <p>First of all, it is worth noting that <strong>this does not remove the preinstalled apps</strong>. If you aim to remove all UWP apps (<strong>which I strongly advise against, as it breaks important system components</strong>), you can achieve this by opening a PowerShell window as Administrator and running <code> Get-AppxPackage -AllUsers | Remove-AppxPackage </code>. Having addressed that, a list of the tweak's functionalities is presented below:</p>
+            <ul>
+                <li><p>Preventing automatic installs of recommended apps</p></li>
+                <li><p>Preventing automatic reinstalls of preinstalled apps</p></li>
+                <li><p>Disabling tips ans suggestions</p></li>
+                <li><p>Disabling online suggestions in settings</p></li>
+                <li><p>Disabling all other content delivery options</p></li>
+            </ul>
+            <h2>Disable telemetry</h2>
+            <p>This tweak disables the following data collection and telemetry options:</p>
+            <ul>
+                <li><p>Windows data collection and telemetry</p></li>
+                <li><p>App diagnostic data permission</p></li>
+                <li><p>App launch telemetry</p></li>
+                <li><p>Microsoft Edge telemetry data collection</p></li>
+                <li><p>Microsoft Office telemetry</p></li>
+            </ul>
+            <h2>Enable Windows 95 taskbar</h2>
+            <p>There are two versions of this tweak. Make sure to <strong>select the appropriate version</strong> compatible with your edition of Windows. The tweak does the following:</p>
+            <ul>
+                <li><p>Making taskbar icons small (this option does't exist on Windows 11 by default, so make sure that you are using the correct version)</p></li>
+                <li><p>Disabling taskbar grouping</p></li>
+            </ul>
+            <h2>Disable Windows Update</h2>
+            <p>To ensure that the system doesn't break, this tweak only disables automatic updates instead of disabling Windows Update in general. Also note that app updates are not affected by this tweak.</p>
+            <h2>Disable Cortana and Web Search</h2>
+            <p>Chosing this won't remove the cortana app itself, although you can achieve that by running <code> Get-AppxPackage *Microsoft.549981C3F5F10* | Remove-AppxPackage </code> in a PowerShell window. Furthermore it does the following:</p>
+            <ul>
+                <li><p>Disabling the cortana app</p></li>
+                <li><p>Disabling cortana on the lockscreen</p></li>
+                <li><p>Preventing the search from using using your location</p></li>
+                <li><p>Disabling web search</p></li>
+            </ul>
+            <h2>More coming soon...</h2>
+            <p>If you have a suggestion, you can contact me <a href="mailto:jan@janbiernacik.com">via email</a>.</p>
+            <br>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

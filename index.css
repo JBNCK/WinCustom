@@ -12,15 +12,22 @@ body {
     background-size: cover;
     object-fit: cover;
 }
+a {
+    color: #202020;
+    text-decoration: none;
+}
+p a {
+    color: rgb(40, 40, 255);
+}
 
 button {
-    background-color: blue;
+    background-color: rgb(35, 35, 255);
     color: white;
-    border-radius: 6px;
-    border: 10px blue solid;
+    border-radius: 5px;
+    border: 10px rgb(35, 35, 255) solid;
     transition: all .2s;
     box-sizing: border-box;
-    width: 49.15%;
+    width: 32.5%;
     box-shadow: 0 0 2px grey
 }
 button:hover {
@@ -32,12 +39,12 @@ button:hover {
     color: black;
     background-color: white;
     border: 10px solid white;
-    box-shadow: 0 0 2px grey;
+    box-shadow: 0 0 1px grey;
 }
 .button_home:hover {
     background-color: white;
     border: 10px solid white;
-    box-shadow: 0 0 4px black;
+    box-shadow: 0 0 1px black;
 }
 
 .main_box {
@@ -48,7 +55,7 @@ button:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 0;
-    box-shadow: 0 0 10px grey;
+    box-shadow: 0 0 10px rgb(70, 70, 70);
     border-radius: 14px;
 }
 .div_white {
@@ -66,6 +73,79 @@ button:hover {
     text-align: center;
 }
 
+.navbar {
+    background-color: rgba(246, 246, 246, 0.8);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    z-index: 1;
+}
+.navbar_full_screen {
+    background-color: #f6f6f6;
+}
+.navbar_icon {
+    height: 32px;
+    grid-column: 1;
+    grid-row: 1;
+}
+.navbar_item {
+    display: grid;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    grid-column: 1;
+    grid-row: 1;
+}
+.navbar_item a {
+    margin-left: 8px;
+    margin-right: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    align-self: center;
+    grid-column: 2;
+    grid-row: 1;
+    transition: all .2s;
+}
+.navbar_item a:hover {
+    background-color: white;
+    box-shadow: 0 0 2px grey;
+    border-radius: 5px;
+    cursor: default;
+}
+.navbar_current {
+    background-color: #f9f9f9;
+    box-shadow: 0 0 2px grey;
+    border-radius: 5px;
+}
+
+.full_screen {
+    width: 70%;
+    bottom: 0;
+    background-color: white;
+    position: absolute;
+    top: 50px;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.full_screen iframe {
+    position: absolute;
+    border: 0;
+    top: 0;
+    bottom: 0;
+    width: 70%;
+    height: 100%;
+}
+
+@media screen and (max-width: 700px) {
+    .full_screen {
+        width: 92%;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+}
 @media screen and (max-width: 450px) {
     .main_box {
         width: 80%;

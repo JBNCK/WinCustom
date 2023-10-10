@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>JS Course</title>
+        <title>WinCustom - Home</title>
         <link rel="stylesheet" href="index.css">
+        <link rel="icon" type="image/x-icon" href="icon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+        <header>
+            <div class="navbar">
+                <div class="navbar_item"><img onclick="window.location.href = './'" class="navbar_icon" src="icon.png"><a href="about">About</a></div>
+            </div>
+        </header>
         <div class="main_box">
             <div class="div_white">
                 <h2>WinCustom 10/11 (beta)</h2>
-                <p>Select your presets and click on download to obtain your personalized script.</p>
+                <p>Select your presets and click on download to obtain your personalized registry file.</p>
                 <label>
-                    <input type="checkbox" id="debloatCheckbox" onchange="debloatScriptChecked()">Remove bloatware
+                    <input type="checkbox" id="debloatCheckbox" onchange="debloatScriptChecked()">Remove bloatware and suggestions
                 </label><br>
                 <label>
                     <input type="checkbox" id="disableTelemetryCheckbox" onchange="disableTelemetryScriptChecked()">Disable telemetry
                 </label><br>
                 <label>
-                    <input type="checkbox" id="enableOldStartMenuCheckbox" onchange="enableOldStartMenuScriptChecked()">Enable old start menu (Windows 10)
+                    <input type="checkbox" id="enableOldStartMenuCheckbox" onchange="enableOldStartMenuScriptChecked()">Enable Windows 95 taskbar (Windows 10)
+                </label><br>
+                <label>
+                    <input type="checkbox" id="enableOldStartMenu11Checkbox" onchange="enableOldStartMenu11ScriptChecked()">Enable Windows 95 taskbar (Windows 11)
                 </label><br>
                 <label>
                     <input type="checkbox" id="disableWindowsUpdateCheckbox" onchange="disableWindowsUpdateScriptChecked()">Disable Windows Update
                 </label><br>
                 <label>
-                    <input type="checkbox" id="disableCortanaCheckbox" onchange="disableCortanaScriptChecked()">Disable Cortana and Search
+                    <input type="checkbox" id="disableCortanaCheckbox" onchange="disableCortanaScriptChecked()">Disable Cortana and Web Search
                 </label>
             </div>
             <div class="div_grey">
                 <a onclick="downloadFunction()"><button>Download</button></a>
                 <a onclick="window.location.href = 'https://www.janbiernacik.com';"><button class="button_home">Home</button></a>
+                <a onclick="window.location.href = 'mailto:jan@janbiernacik.com';"><button class="button_home">Suggestion</button></a>
             </div>
         </div>
         <script src="index.js"></script>
